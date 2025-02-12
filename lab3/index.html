@@ -81,19 +81,21 @@
             <h2>Skills Assessment</h2>
             <fieldset>
                 <legend>Skills and Preferences</legend>
-                <label for="skills">Describe your skills:</label>
-                <textarea id="skills" name="skills" placeholder="List your skills here..."></textarea>
-                
-                <label for="resume">Upload your resume:</label>
-                <input type="file" id="resume" name="resume">
-                
-                <label for="color">Pick your favorite color:</label>
-                <input type="color" id="color" name="color">
-                
-                <label for="time">Preferred study time:</label>
-                <input type="time" id="time" name="time">
-                
-                <button type="submit">Submit Survey</button>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <label for="skills">Describe your skills:</label>
+                    <textarea id="skills" name="skills" placeholder="List your skills here..."></textarea>
+                    
+                    <label for="resume">Upload your resume:</label>
+                    <input type="file" id="resume" name="resume">
+                    
+                    <label for="color">Pick your favorite color:</label>
+                    <input type="color" id="color" name="color">
+                    
+                    <label for="time">Preferred study time:</label>
+                    <input type="time" id="time" name="time">
+                    
+                    <button type="submit">Submit Survey</button>
+                </form>
             </fieldset>
         </section>
     </main>
