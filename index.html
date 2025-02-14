@@ -1,114 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Card Form</title>
+    <title>Lab 4 - IT College</title>
 </head>
 <body>
     <header>
-        <h1>Student Card FORM</h1>
+        <h1><a href="https://www.youtube.com/@itcollegelviv">YouTube-канал IT Коледжу Львів</a></h1>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/lab1/index.html">Lab1</a></li>
                 <li><a href="/lab2/index.html">Lab2</a></li>
                 <li><a href="/lab3/index.html">Lab3</a></li>
+                <li><a href="/lab4/index.html">Lab4</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Personal Information</h2>
-            <fieldset>
-                <legend>Provide your details</legend>
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required><br>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter a password" required><br>
-                
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required><br>
-                
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required><br>
-                
-                <fieldset>
-                    <legend>Gender</legend>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
-                </fieldset>
-                
-                <fieldset>
-                    <legend>Languages Known</legend>
-                    <input type="checkbox" id="english" name="languages" value="english">
-                    <label for="english">English</label>
-                    <input type="checkbox" id="spanish" name="languages" value="spanish">
-                    <label for="spanish">Spanish</label>
-                    <input type="checkbox" id="french" name="languages" value="french">
-                    <label for="french">French</label>
-                </fieldset>
-                
-                <label for="country">Country:</label>
-                <select id="country" name="country">
-                    <option value="">Select your country</option>
-                    <option value="usa">USA</option>
-                    <option value="uk">UK</option>
-                    <option value="canada">Canada</option>
-                </select>
-            </fieldset>
+            <img src="image.png" alt="Логотип IT Коледжу Львів" height="300">
         </section>
-        
         <section>
-            <h2>College Subjects</h2>
-            <fieldset>
-                <legend>Subjects Selection</legend>
-                <label for="subjects">Select your subjects:</label>
-                <select id="subjects" name="subjects" multiple>
-                    <option value="math">Mathematics</option>
-                    <option value="cs">Computer Science</option>
-                    <option value="physics">Physics</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="english">English</option>
-                </select>
-                
-                <label for="interest">Rate your interest in Computer Science:</label>
-                <input type="range" id="interest" name="interest" min="1" max="10">
-            </fieldset>
+            <p>Дізнайтесь більше про навчання у нашому коледжі!</p>
+            <button onclick="window.location.href='https://www.youtube.com/@itcollegelviv'">Підписатися</button>
         </section>
-        
         <section>
-            <h2>Skills Assessment</h2>
-            <fieldset>
-                <legend>Skills and Preferences</legend>
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <label for="skills">Describe your skills:</label>
-                    <textarea id="skills" name="skills" placeholder="List your skills here..."></textarea>
-                    
-                    <label for="resume">Upload your resume:</label>
-                    <input type="file" id="resume" name="resume">
-                    
-                    <label for="color">Pick your favorite color:</label>
-                    <input type="color" id="color" name="color">
-                    
-                    <label for="time">Preferred study time:</label>
-                    <input type="time" id="time" name="time">
-                    
-                    <button type="submit">Submit Survey</button>
-                </form>
-            </fieldset>
+            <h2>Навчальне відео</h2>
+            <video width="80%" height="540" controls>
+                <source src="video1.mp4" type="video/mp4">
+                Ваш браузер не підтримує відео.
+            </video>
+        </section>
+        <section>
+            <h2>Аудіозапис</h2>
+            <audio controls>
+                <source src="videoplayback.m4a" type="audio/m4a">
+                Ваш браузер не підтримує аудіо.
+            </audio>
+        </section>
+        <section>
+            <h2>YouTube Відео</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jgLIvEaSRlQ" frameborder="0" allowfullscreen></iframe>
+        </section>
+        <section>
+            <h2>Карта університетів та коледжів Львова</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1lggaGAt08c2nACCh5RAeuJ3QTzCIHV0" width="640" height="480"></iframe>
         </section>
     </main>
-    <footer>
-        <p>&copy; Student card by {your name}. All rights reserved.</p>
-    </footer>
+    <aside>
+        <h3>Популярні відео</h3>
+        <ul>
+            <li><a href="https://youtu.be/jgLIvEaSRlQ">Відео 1</a></li>
+            <li><a href="https://youtu.be/T4lf376F53Y">Відео 2</a></li>
+            <li><a href="https://youtu.be/G84HHB2beT4">Відео 3</a></li>
+            <li><a href="https://www.youtube.com/live/P5oSkMwZVLs">Відео 4</a></li>
+            <li><a href="https://youtu.be/UG0R1lPOu-o">Відео 5</a></li>
+        </ul>
+    </aside>
 </body>
 </html>
