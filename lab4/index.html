@@ -4,6 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 4 - IT College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #1a75ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        article {
+            flex: 1;
+            min-width: 600px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+        }
+        h2 {
+            color: #1a75ff;
+            border-bottom: 2px solid #1a75ff;
+            padding-bottom: 10px;
+        }
+        .logo-section {
+            text-align: center;
+        }
+        .description-section {
+            text-align: center;
+            padding: 20px;
+        }
+        .description-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        video, iframe {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+        .audio-section {
+            text-align: center;
+        }
+        aside {
+            width: 300px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin-left: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        aside h3 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        aside ul {
+            padding-left: 20px;
+        }
+        aside li {
+            margin-bottom: 10px;
+        }
+        aside a {
+            color: #1a75ff;
+            text-decoration: none;
+        }
+        aside a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 950px) {
+            main {
+                flex-direction: column;
+            }
+            aside {
+                width: auto;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -11,52 +125,59 @@
     </header>
 
     <main>
-        <section>
-            <img src="image/img.png" alt="Логотип ІТ Коледжу Львів" width="300" height="300">
-        </section>
+        <article>
+            <!-- Перша секція - логотип коледжу -->
+            <section class="logo-section">
+                <img src="image/img.png" alt="Логотип ІТ Коледжу Львів" height="300">
+            </section>
 
-        <section>
-            <p>Дізнайтесь більше про навчання у нашому коледжі!</p>
-            <button onclick="window.location.href='https://www.youtube.com/@itcollegelviv'">Підписатися</button>
-        </section>
+            <!-- Друга секція - опис та кнопка "Підписатися" -->
+            <section class="description-section">
+                <p>Дізнайтесь більше про навчання у нашому коледжі!</p>
+                <button onclick="window.location.href='https://www.youtube.com/@itcollegelviv'">Підписатися</button>
+            </section>
 
-        <section>
-            <h2>Навчальне відео</h2>
-            <video width="80%" height="540" controls>
-                <source src="video/video01.mp4" type="video/mp4">
-                Ваш браузер не підтримує відео.
-            </video>
-        </section>
+            <!-- Третя секція - відео -->
+            <section>
+                <h2>Навчальне відео</h2>
+                <video width="80%" height="540" controls>
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Ваш браузер не підтримує відео.
+                </video>
+            </section>
 
-        <section>
-            <h2>Аудіозапис</h2>
-            <audio controls preload="auto">
-                <source src="audio/videoplayback.m4a" type="audio/mp4">
-                <source src="audio/videoplayback.mp3" type="audio/mpeg">
-                <source src="audio/videoplayback.ogg" type="audio/ogg">
-                Ваш браузер не підтримує аудіо.
-            </audio>
-        </section>
+            <!-- Четверта секція - аудіо -->
+            <section class="audio-section">
+                <h2>Аудіозапис</h2>
+                <audio controls preload="auto">
+                    <source src="audio/videoplayback.m4a" type="audio/mp4">
+                    Ваш браузер не підтримує аудіо.
+                </audio>
+            </section>
+
+            <!-- П'ята секція - YouTube відео -->
+            <section>
+                <h2>YouTube Відео</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jgLIvEaSRlQ" frameborder="0" allowfullscreen></iframe>
+            </section>
+
+            <!-- Шоста секція - Google Maps -->
+            <section>
+                <h2>Карта університетів та коледжів Львова</h2>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1lggaGAt08c2nACCh5RAeuJ3QTzCIHV0" width="640" height="480"></iframe>
+            </section>
+        </article>
+
+        <aside>
+            <h3>Популярні відео</h3>
+            <ul>
+                <li><a href="https://youtu.be/jgLIvEaSRlQ" target="_blank">Відео 1 - День відкритих дверей</a></li>
+                <li><a href="https://youtu.be/T4lf376F53Y" target="_blank">Відео 2 - Спеціальності коледжу</a></li>
+                <li><a href="https://youtu.be/G84HHB2beT4" target="_blank">Відео 3 - Студентське життя</a></li>
+                <li><a href="https://www.youtube.com/live/P5oSkMwZVLs" target="_blank">Відео 4 - Вступна кампанія</a></li>
+                <li><a href="https://youtu.be/UG0R1lPOu-o" target="_blank">Відео 5 - Практика студентів</a></li>
+            </ul>
+        </aside>
     </main>
-</body>
-</html>
-<h2>YouTube Відео</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jgLIvEaSRlQ" frameborder="0" allowfullscreen></iframe>
-</section>
-<section>
-<h2>Карта університетів та коледжів Львова</h2>
-<iframe src="https://www.google.com/maps/d/embed?mid=1lggaGAt08c2nACCh5RAeuJ3QTzCIHV0" width="640" height="480"></iframe>
-</section>
-</main>
-<aside>
-<h3>Популярні відео</h3>
-<ul>
-<li><a href="https://youtu.be/jgLIvEaSRlQ">Відео 1</a></li>
-<li><a href="https://youtu.be/T4lf376F53Y">Відео 2</a></li>
-<li><a href="https://youtu.be/G84HHB2beT4">Відео 3</a></li>
-<li><a href="https://www.youtube.com/live/P5oSkMwZVLs">Відео 4</a></li>
-<li><a href="https://youtu.be/UG0R1lPOu-o">Відео 5</a></li>
-</ul>
-</aside>
 </body>
 </html>
