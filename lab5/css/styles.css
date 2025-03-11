@@ -1,64 +1,130 @@
 /* Підключення шрифтів */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
-header {
-    background: url('../image/img.png') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
+/* Стилі для хедера */
+#hero_container {
     position: relative;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(32, 32, 150, 0.2), rgba(16, 16, 128, 0.7));
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 0 20px;
+    max-width: 1000px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin: 0;
 }
 
-nav {
+/* Стилі для навігації */
+.links {
     display: flex;
-    justify-content: center;
-    background: #2c3e50;
-    padding: 10px 0;
+    background: linear-gradient(to right, #1a2370, #0b0b60);
+    width: 100%;
+    margin: 0;
 }
 
-nav a {
+.links a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    font-weight: 500;
-}
-
-nav a:hover {
-    background: #34495e;
-    border-radius: 5px;
-}
-
-.links-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background: #1a237e;
-}
-
-.links-container a {
-    color: white;
-    text-decoration: none;
+    flex: 1;
+    padding: 25px 15px;
+    text-align: center;
     font-size: 1.2em;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     transition: background 0.3s;
 }
 
-.links-container a:hover {
-    background: rgba(255, 255, 255, 0.5);
+.links a:last-child {
+    border-right: none;
 }
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Додаємо іконки перед посиланнями */
+.links a:nth-child(1)::before {
+    content: "\f05a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #3fbbf7;
+    font-size: 1.2em;
+}
+
+.links a:nth-child(2)::before {
+    content: "\f19c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #3fbbf7;
+    font-size: 1.2em;
+}
+
+.links a:nth-child(3)::before {
+    content: "\f02d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #3fbbf7;
+    font-size: 1.2em;
+}
+
+.links a:nth-child(4)::before {
+    content: "\f080";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #3fbbf7;
+    font-size: 1.2em;
+}
+
+/* Додайте також підключення Font Awesome в ваш HTML */
