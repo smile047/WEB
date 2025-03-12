@@ -1,0 +1,52 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 68%; /* трохи звузимо головну частину */
+}
+
+.main-news {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+}
+
+.main-news img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+    gap: 20px;
+}
+
+.news-grid article {
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+aside {
+    width: 30%; /* Збільшимо, щоб заголовки не тиснулися */
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headline {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
