@@ -3,12 +3,10 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 }
-
 header {
     background-color: #f8f9fa;
     text-align: center;
@@ -16,20 +14,17 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
-
 nav {
     background-color: #e9ecef;
     text-align: center;
     padding: 10px 0;
 }
-
 nav a {
     text-decoration: none;
     color: #000;
     margin: 0 10px;
     font-weight: bold;
 }
-
 main {
     display: flex;
     justify-content: space-between;
@@ -38,7 +33,6 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 /* Ліва частина (головна новина + сітка новин) */
 .content {
     width: 70%;
@@ -46,7 +40,6 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-
 /* Головна новина */
 .main-news {
     background-color: #f1f1f1;
@@ -54,21 +47,18 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .main-news img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-top: 10px;
 }
-
 /* Сітка новин */
 .news-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
-
 .news-grid article {
     width: calc(50% - 10px);
     background-color: #f9f9f9;
@@ -76,13 +66,11 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .news-grid img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
-
 /* Права частина (заголовки новин) */
 aside {
     width: 30%;
@@ -91,16 +79,13 @@ aside {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 .headline {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
-
 .headline:last-child {
     border-bottom: none;
 }
-
 /* Футер внизу */
 footer {
     background-color: #f8f9fa;
