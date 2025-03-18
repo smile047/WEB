@@ -1,4 +1,3 @@
-/* Загальні стилі */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,45 +6,37 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    padding: 20px;
 }
 
 header {
+    background-color: #f8f8f8;
     text-align: center;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
 }
 
 nav {
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: #f0f0f0;
     text-align: center;
-    margin-bottom: 20px;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
 }
 
 nav a {
+    color: #0066cc;
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
 }
 
-/* Основний контент */
 main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+    padding: 20px;
 }
 
 .news-grid {
@@ -55,36 +46,41 @@ main {
 }
 
 .news-item {
-    background-color: white;
     padding: 15px;
     border: 1px solid #ccc;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s;
     text-align: center;
-    border-radius: 5px;
-    transition: transform 0.2s;
 }
 
 .news-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .news-item img {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
 .news-item h2 {
     font-size: 1.2em;
     margin: 10px 0;
+    color: #0066cc;
+}
+
+.news-item a {
+    text-decoration: none;
 }
 
 .news-item p {
     font-size: 1em;
-    color: #333;
+    color: #666;
 }
 
-/* Бічна панель */
 .aside-news {
     display: grid;
     gap: 15px;
@@ -92,29 +88,40 @@ main {
 
 .headline {
     display: flex;
-    align-items: center;
     gap: 10px;
+    align-items: center;
     padding: 10px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.headline:hover {
+    background-color: #f5f5f5;
 }
 
 .headline img {
     width: 50px;
     height: 50px;
-    border-radius: 5px;
 }
 
 .headline h3 {
-    font-size: 1em;
     margin: 0;
+    font-size: 1em;
+    color: #0066cc;
+}
+
+.headline time {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.headline a {
+    text-decoration: none;
 }
 
 footer {
+    background-color: #f8f8f8;
     text-align: center;
     padding: 15px;
-    background-color: #fff;
     margin-top: 20px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
