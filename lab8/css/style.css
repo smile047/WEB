@@ -1,0 +1,172 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стилі для заголовка і меню */
+.header {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Вирівнює меню по центру */
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: yellow;
+}
+
+/* Додаємо анімацію для меню */
+.menu li {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+/* Основний контейнер */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Сітка новин */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Секція реклами */
+.aside-ad {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ad-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+.ad-item:hover {
+    transform: scale(1.1);
+}
+
+.ad-item img {
+    width: 100%;
+    height: auto;
+    background-color: yellow;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    .aside-ad {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ad-item {
+        width: 100%;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
