@@ -4,18 +4,23 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Стилі для заголовка і меню */
 .header {
     background-color: #333;
     padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .navbar {
     display: flex;
-    justify-content: center; /* Вирівнює меню по центру */
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .menu-toggle {
@@ -25,7 +30,7 @@ body {
 .menu {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
@@ -41,14 +46,11 @@ body {
     color: yellow;
 }
 
-/* Додаємо анімацію для меню */
-.menu li {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.menu li:hover {
-    transform: scale(1.1);
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Основний контейнер */
@@ -64,26 +66,39 @@ body {
 /* Сітка новин */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .news-item {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
     background-color: #f9f9f9;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 .news-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .news-item img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+}
+
+.news-item h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.news-item p {
+    color: #666;
+    margin: 5px 0;
 }
 
 /* Секція реклами */
@@ -97,40 +112,41 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.ad-item:hover {
-    transform: scale(1.1);
+.ad-placeholder {
+    background-color: yellow;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
-.ad-item img {
-    width: 100%;
-    height: auto;
-    background-color: yellow;
+.ad-item:hover {
+    transform: scale(1.05);
 }
 
 /* Медіа-запити для адаптивності */
 @media (max-width: 767px) {
     .container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: 1fr;
     }
 
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #333;
         position: absolute;
         top: 50px;
         left: 0;
         width: 100%;
-        padding: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+        background-color: #333;
+        z-index: 1000;
     }
 
     .menu li {
         text-align: center;
-        padding: 10px 0;
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
     }
 
     .menu-icon {
@@ -139,20 +155,13 @@ body {
 
     .menu-toggle:checked + .menu-icon + .menu {
         display: flex;
-        opacity: 1;
-    }
-
-    .aside-ad {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ad-item {
-        width: 100%;
     }
 
     .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aside-ad {
         grid-template-columns: 1fr;
     }
 }
