@@ -1,10 +1,10 @@
 // Завдання 1: Розробити скрипт, який виводить рядок з цифр заданого розміру n
 function task1() {
     console.log("Завдання 1:");
-    let n = 3; // Фіксований розмір
+    const n = 3; // Розмір рядка
     
     for (let i = 1; i <= n; i++) {
-        let row = "";
+        let row = '';
         for (let j = 1; j <= n; j++) {
             row += j;
         }
@@ -15,7 +15,7 @@ function task1() {
 // Завдання 2: Обчислення суми числового ряду S = 1 + 1/2 + 1/3 + ... + 1/n
 function task2() {
     console.log("\nЗавдання 2:");
-    let n = 5; // Фіксований розмір
+    const n = 5;
     
     let sum = 0;
     let sumFormula = "S = ";
@@ -31,24 +31,24 @@ function task2() {
 // Завдання 3: Гра "Вгадай число" від 1 до 100
 function task3() {
     console.log("\nЗавдання 3:");
-    let secretNumber = Math.floor(Math.random() * 100) + 1;
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
     console.log(`Загадане число: ${secretNumber}`);
     
-    let attempts = [];
+    let attempts = 0;
     let userGuess;
     
     do {
         userGuess = Math.floor(Math.random() * 100) + 1;
-        attempts.push(userGuess);
+        attempts++;
         
         if (userGuess < secretNumber) {
-            console.log(`Спроба ${attempts.length}: ${userGuess} - більше`);
+            console.log(`Спроба ${attempts}: ${userGuess} - більше`);
         } else if (userGuess > secretNumber) {
-            console.log(`Спроба ${attempts.length}: ${userGuess} - менше`);
+            console.log(`Спроба ${attempts}: ${userGuess} - менше`);
         }
     } while (userGuess !== secretNumber);
     
-    console.log(`Число "${secretNumber}" вгадане за ${attempts.length} спроб`);
+    console.log(`Число "${secretNumber}" вгадане за ${attempts} спроб`);
 }
 
 // Виклик функцій
