@@ -1,0 +1,85 @@
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Шапка */
+.header {
+    background-color: #001f3f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Меню */
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 20px;
+}
+
+.nav__item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav__item a:hover {
+    text-decoration: underline;
+}
+
+/* Контент */
+.main-content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Блок новини */
+.featured-news {
+    padding: 15px;
+    background: #0074d9;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.news-list h2 {
+    border-bottom: 2px solid #0074d9;
+    padding-bottom: 5px;
+}
+
+/* Список посилань */
+.news-links {
+    list-style: none;
+    padding: 0;
+}
+
+.news-links li {
+    padding: 5px 0;
+}
+
+.news-links a {
+    color: #0074d9;
+    text-decoration: none;
+}
+
+.news-links a:hover {
+    text-decoration: underline;
+}
