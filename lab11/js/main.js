@@ -1,88 +1,72 @@
-// Added multiple debugging methods
-(function() {
-    // First method: window alert for very early debugging
-    alert("Script is being loaded!");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Скрипт успішно підключено!");
 
-    // Logging to console
-    console.log("Script is loaded successfully!");
-    console.warn("Debugging started");
+    // Завдання 1: Вивід ромба
+    function drawDiamond(n) {
+        let result = "";
+        for (let i = 1; i <= n; i++) {
+            result += " ".repeat(n - i) + getNumberRow(i) + "\n";
+        }
+        for (let i = n - 1; i >= 1; i--) {
+            result += " ".repeat(n - i) + getNumberRow(i) + "\n";
+        }
+        console.log(result);
+    }
 
-    // Attach logging to window for global access
-    window.debugLog = function(message) {
-        console.log(message);
-        alert(message);
-    };
+    function getNumberRow(num) {
+        let row = "";
+        for (let i = 1; i <= num; i++) row += i;
+        for (let i = num - 1; i >= 1; i--) row += i;
+        return row;
+    }
 
-    // Debugging wrapper for tasks
-    function safeTaskExecute(taskFunction) {
-        try {
-            debugLog("Attempting to execute task");
-            taskFunction();
-        } catch (error) {
-            console.error("Error in task:", error);
-            alert("Error: " + error.message);
+    let n = parseInt(prompt("Введіть розмір ромба (n):"));
+    if (!isNaN(n) && n > 0) {
+        drawDiamond(n);
+    } else {
+        console.log("Введене некоректне значення.");
+    }
+
+    // Завдання 2: Обчислення суми ряду
+    function calculateSum(n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            sum += 1 / i;
+        }
+        return sum;
+    }
+
+    let n2 = parseInt(prompt("Введіть n для обчислення суми ряду:"));
+    if (!isNaN(n2) && n2 > 0) {
+        console.log(`Сума ряду S = ${calculateSum(n2).toFixed(4)}`);
+    } else {
+        console.log("Введене некоректне значення.");
+    }
+
+    // Завдання 3: Гра "Вгадай число"
+    function guessNumberGame() {
+        let target = Math.floor(Math.random() * 100) + 1;
+        let guess;
+        console.log("Гра 'Вгадай число' розпочата!");
+
+        while (true) {
+            guess = parseInt(prompt("Вгадайте число від 1 до 100:"));
+            if (isNaN(guess)) {
+                console.log("Будь ласка, введіть число.");
+                continue;
+            }
+            if (guess > target) {
+                console.log("Менше!");
+            } else if (guess < target) {
+                console.log("Більше!");
+            } else {
+                console.log("Вітаємо! Ви вгадали число!");
+                break;
+            }
         }
     }
 
-    // Modify existing tasks to use safe execution
-    window.task1 = function() {
-        safeTaskExecute(function() {
-            debugLog("Task 1 started");
-            let n = parseInt(prompt("Введіть розмір n для завдання 1:"));
-            
-            if (isNaN(n) || n <= 0) {
-                throw new Error("Некоректне введення");
-            }
-            
-            let result = "";
-            for (let i = 1; i <= n; i++) {
-                result += "1".repeat(i) + "\n";
-            }
-            
-            debugLog("Завдання 1 (Рядок цифр):\n" + result);
-        });
-    };
-
-    window.task2 = function() {
-        safeTaskExecute(function() {
-            debugLog("Task 2 started");
-            let n = parseInt(prompt("Введіть число n для завдання 2:"));
-            
-            if (isNaN(n) || n <= 0) {
-                throw new Error("Некоректне введення");
-            }
-            
-            let sum = 0;
-            for (let i = 1; i <= n; i++) {
-                sum += 1 / i;
-            }
-            
-            debugLog(`Завдання 2 (Сума ряду): S = ${sum.toFixed(4)}`);
-        });
-    };
-
-    window.task3 = function() {
-        safeTaskExecute(function() {
-            debugLog("Task 3 started");
-            const randomNumber = Math.floor(Math.random() * 100) + 1;
-            let attempts = 0;
-            let userGuess;
-            
-            do {
-                userGuess = parseInt(prompt("Введіть число від 1 до 100:"));
-                attempts++;
-                
-                if (userGuess > randomNumber) {
-                    debugLog("Менше!");
-                } else if (userGuess < randomNumber) {
-                    debugLog("Більше!");
-                } else {
-                    debugLog(`Вітаю! Ви вгадали число ${randomNumber} за ${attempts} спроб.`);
-                }
-            } while (userGuess !== randomNumber);
-        });
-    };
-
-    // Final startup log
-    console.log("🚀 Script initialization complete!");
-})();
+    if (confirm("Хочете зіграти у 'Вгадай число'?")) {
+        guessNumberGame();
+    }
+});
