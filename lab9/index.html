@@ -3,44 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новини Львівської Політехніки</title>
+    <title>Національний університет "Львівська політехніка"</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="logo-section">
+                    <img src="img/logo bursa.jpg" alt="Логотип Львівської Політехніки" class="university-logo">
+                    <div class="university-name">
+                        <h1>НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ</h1>
+                        <h2>«ЛЬВІВСЬКА ПОЛІТЕХНІКА»</h2>
+                    </div>
+                </div>
+                <div class="search-lang">
+                    <div class="lang-selector">
+                        <a href="#">UK</a>
+                        <a href="#">EN</a>
+                        <a href="#">DE</a>
+                        <a href="#">ES</a>
+                        <a href="#">FR</a>
+                        <a href="#">IT</a>
+                        <a href="#">PL</a>
+                        <a href="#">中文</a>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#">Політехніка</a></li>
+                    <li><a href="#">Інститути</a></li>
+                    <li><a href="#">Освіта</a></li>
+                    <li><a href="#">Наука</a></li>
+                    <li><a href="#">Проекти</a></li>
+                    <li><a href="#">Вступнику</a></li>
+                    <li><a href="#">Студенту</a></li>
+                    <li><a href="#">Працівнику</a></li>
+                    <li><a href="#">Випускнику</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<header class="header">
-    <img src="img/logo bursa.jpg" alt="Логотип Львівської Політехніки" class="header__logo">
-</header>
+    <main class="main-content">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="card">
+                    <a href="https://lpnu.ua/news/konferentsiia-trudovoho-kolektyvu-natsionalnoho-universytetu-lvivska-politekhnika" class="card-link">
+                        <img src="img/1 polit.jpg" alt="Конференція трудового колективу" class="card-image">
+                        <div class="card-title">Конференція трудового колективу</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://lpnu.ua/news/politekhnika-ekskursiina" class="card-link">
+                        <img src="img/2 polit.jpg" alt="Політехніка екскурсійна" class="card-image">
+                        <div class="card-title">Політехніка екскурсійна</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://lpnu.ua/news/lvivska-politekhnika-u-reitynhakh-zakladiv-vyshchoi-osvity" class="card-link">
+                        <img src="img/3 polit.jpg" alt="Рейтинг університетів" class="card-image">
+                        <div class="card-title">Львівська політехніка у рейтингах</div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://lpnu.ua/news/stratehichnyi-plan-rozvytku-lvivskoi-politekhniky-do-2025-roku" class="card-link">
+                        <img src="img/4 polit.jpg" alt="Стратегічний план розвитку" class="card-image">
+                        <div class="card-title">Стратегічний план розвитку</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
 
-<main class="news">
-    <section class="news__item">
-        <a href="https://lpnu.ua/news/konferentsiia-trudovoho-kolektyvu-natsionalnoho-universytetu-lvivska-politekhnika" class="news__link">
-            <img src="img/1 polit.jpg" alt="Конференція трудового колективу" class="news__image">
-            <h2 class="news__title">Конференція трудового колективу</h2>
-        </a>
+    <section class="news-section">
+        <div class="container">
+            <h2 class="news-heading">Новини університету</h2>
+            <div class="news-container">
+                <div class="news-item">
+                    <a href="https://lpnu.ua/news/nataliia-shakhovska-zustrilas-iz-vladykamy-lvivskoi-arkhyieparkhii-ukrainskoi-hreko" class="news-link">
+                        <div class="news-image-container">
+                            <img src="img/news 1.jpg" alt="Наталія Шаховська зустрілась із владиками" class="news-image">
+                            <div class="news-date">2 КВІТ. 2025, 09:16</div>
+                        </div>
+                        <h3 class="news-title">Наталія Шаховська зустрілась із владиками Львівської Архиєпархії Української Греко-Католицької Церкви</h3>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="https://lpnu.ua/news/u-mezhakh-proiektu-eulead-vidbulas-lektsiia-doktora-politychnykh-nauk-varshavskoho" class="news-link">
+                        <div class="news-image-container">
+                            <img src="img/news 2.jpg" alt="У межах проекту EU_LEAD відбулася лекція" class="news-image">
+                            <div class="news-date">2 КВІТ. 2025, 09:02</div>
+                        </div>
+                        <h3 class="news-title">У межах проекту EU_LEAD відбулася лекція доктора політичних наук Варшавського університету Вадима Желтовського</h3>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="https://lpnu.ua/events/piata-mizhnarodna-konferentsiia-nezalezhnist-ukrainy-prava-liudyny-ta-natsionalna-bezpeka" class="news-link">
+                        <div class="news-image-container">
+                            <img src="img/news 3.jpg" alt="П'ята Міжнародна конференція" class="news-image">
+                            <div class="news-date">1 КВІТ. 2025, 17:01</div>
+                        </div>
+                        <h3 class="news-title">П'ята Міжнародна конференція «Незалежність України: права людини та національна безпека»</h3>
+                    </a>
+                </div>
+                <div class="news-item">
+                    <a href="https://lpnu.ua/events/piata-mizhnarodna-konferentsiia-nezalezhnist-ukrainy-prava-liudyny-ta-natsionalna-bezpeka" class="news-link">
+                        <div class="news-image-container">
+                            <img src="img/news 4.jpg" alt="Emergency Design 2025" class="news-image">
+                            <div class="news-date">1 КВІТ. 2025, 12:21</div>
+                        </div>
+                        <h3 class="news-title">Emergency Design 2025: у рамках Днів італійської мови та культури в Університеті відбувся воркшоп</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="news__item">
-        <a href="https://lpnu.ua/news/politekhnika-ekskursiina" class="news__link">
-            <img src="img/2 polit.jpg" alt="Політехніка екскурсійна" class="news__image">
-            <h2 class="news__title">Політехніка екскурсійна</h2>
-        </a>
-    </section>
-
-    <section class="news__item">
-        <a href="https://lpnu.ua/news/lvivska-politekhnika-u-reitynhakh-zakladiv-vyshchoi-osvity" class="news__link">
-            <img src="img/3 polit.jpg" alt="Рейтинг університетів" class="news__image">
-            <h2 class="news__title">Львівська політехніка у рейтингах</h2>
-        </a>
-    </section>
-
-    <section class="news__item">
-        <a href="https://lpnu.ua/news/stratehichnyi-plan-rozvytku-lvivskoi-politekhniky-do-2025-roku" class="news__link">
-            <img src="img/4 polit.jpg" alt="Стратегічний план розвитку" class="news__image">
-            <h2 class="news__title">Стратегічний план розвитку</h2>
-        </a>
-    </section>
-</main>
-
+    <footer>
+        <div class="container footer-columns">
+            <div class="footer-column">
+                <h3>Громадські організації</h3>
+                <ul>
+                    <li><a href="#">Товариство «Просвіта»</a></li>
+                    <li><a href="#">Первинна профспілкова організація працівників Національного університету «Львівська політехніка»</a></li>
+                    <li><a href="#">Колегія студентів</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Зворотний зв'язок</h3>
+                <ul>
+                    <li><a href="#">Телефони гарячої лінії</a></li>
+                    <li><a href="mailto:coffice@lpnu.ua">Канцелярія університету: coffice@lpnu.ua</a></li>
+                    <li><a href="mailto:com.centre@lpnu.ua">Пресцентр «Центр комунікацій»: com.centre@lpnu.ua +38 032 258-22-82;</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Офіційний веб-сайт Національного університету «Львівська політехніка»</h3>
+                <ul>
+                    <li><a href="#">© Національний університет «Львівська політехніка», 2005-2025.</a></li>
+                    <li><a href="#">Сертифікат якості (стандарт ISO 9001:2015)</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
